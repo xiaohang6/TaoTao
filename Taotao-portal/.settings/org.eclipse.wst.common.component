@@ -7,9 +7,6 @@
         <dependent-module archiveName="Taotao-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Taotao-common/Taotao-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Taotao-manager-pojo-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Taotao-manager-pojo/Taotao-manager-pojo">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="Taotao-portal"/>
         <property name="java-output-path" value="/Taotao-portal/target/classes"/>
     </wb-module>
