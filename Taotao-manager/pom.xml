@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.xh</groupId>
+		<artifactId>Taotao-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.xh</groupId>
+	<artifactId>Taotao-manager</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<!-- 依赖管理（向jar包一样写一个依赖就行了） -->
+	<dependencies>
+		<dependency>
+			<groupId>com.xh</groupId>
+			<artifactId>Taotao-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<modules>
+		<module>Taotao-manager-pojo</module>
+		<module>Taotao-manager-mapper</module>
+		<module>Taotao-manager-service</module>
+		<module>Taotao-manager-web</module>
+	</modules>
+	<build>
+		<!-- 配置tomcat插件在maventomcat上运行需要用到 -->
+		<!-- 使用 tomcat7-maven-plugin，可以将tomcat内嵌到web项目中，直接运行webapp项目。 -->
+		<!-- 项目访问的路径就在这 -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<port>8080</port>
+					<path>/</path>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
