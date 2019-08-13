@@ -29,7 +29,8 @@ public final class CookieUtils {
 	/**
 	 * 得到Cookie的值,
 	 * 
-	 * @param request
+	 * @param reques
+	 *            t
 	 * @param cookieName
 	 * @return
 	 */

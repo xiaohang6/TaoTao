@@ -33,7 +33,8 @@ public class CartController {
 	public String addCartItem(@PathVariable Long itemId, @RequestParam(defaultValue = "1") Integer num,
 			HttpServletRequest request, HttpServletResponse response) {
 		TaotaoResult result = cartService.addCartItem(itemId, num, request, response);
-		// 这样写是个绝对路径 /很重要 /代表了从根目录算起
+		// 这样写是个绝对路径 前面这个/很重要 /代表了从根目录算起
+		// 跳转到其他controller
 		return "redirect:/cart/success.html";
 	}
 
@@ -54,7 +55,7 @@ public class CartController {
 	@RequestMapping("/delete/{itemId}")
 	public String deleteCartItem(@PathVariable Long itemId, HttpServletRequest request, HttpServletResponse response) {
 		cartService.deleteCartItem(itemId, request, response);
-		//跳转到其他controller
+		// 跳转到其他controller
 		return "redirect:/cart/cart.html";
 	}
 
